@@ -33,13 +33,10 @@ class ViewController: UIViewController {
     
 //뇌 파동 사운드 버튼 생성
     
-    @IBOutlet weak var deltaSound: UIButton!
     
-    @IBOutlet weak var thetaSound: UIButton!
     
-    @IBOutlet weak var betaSound: UIButton!
     
-    @IBOutlet weak var alphaSound: UIButton!
+    
     
     
 //시간 추가 생성
@@ -71,6 +68,7 @@ class ViewController: UIViewController {
     var count: Int = 0
     var timerCounting: Bool = false
     //오디오
+    var player: AVAudioPlayer?
     var fire: AVAudioPlayer?
     var wind: AVAudioPlayer?
     var keybord: AVAudioPlayer?
@@ -78,11 +76,8 @@ class ViewController: UIViewController {
     var wave: AVAudioPlayer?
     var forest: AVAudioPlayer?
     var rain: AVAudioPlayer?
-    var delta: AVAudioPlayer?
-    var theta: AVAudioPlayer?
-    var beta: AVAudioPlayer?
-    var alpha: AVAudioPlayer?
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         StartStopBtn.setTitleColor(UIColor.green, for: .normal)
@@ -265,103 +260,10 @@ class ViewController: UIViewController {
         
         }
     
-   
-    @IBAction func deltaTapped() {
-        let urlString = Bundle.main.path(forResource: "델타파", ofType: "mp3")
-        do {
-           try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
-            }
-            delta = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            
-            guard let player = delta else {
-                return
-            }
-            player.play()
-        }
-        catch {
-            print("오류가 났어 오류가 이런 젠장!!!")
-        }
-    
-    }
-    
-    @IBAction func thetaTapped() {
-        let urlString = Bundle.main.path(forResource: "쎄타파", ofType: "mp3")
-        do {
-           try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
-            }
-            theta = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            
-            guard let player = theta else {
-                return
-            }
-            player.play()
-        }
-        catch {
-            print("오류가 났어 오류가 이런 젠장!!!")
-        }
-    
-    }
-    
-    @IBAction func betaTapped() {
-        let urlString = Bundle.main.path(forResource: "베타파", ofType: "mp3")
-        do {
-           try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
-            }
-            beta = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            
-            guard let player = beta else {
-                return
-            }
-            player.play()
-        }
-        catch {
-            print("오류가 났어 오류가 이런 젠장!!!")
-        }
-    
-    }
-    
-    @IBAction func alphaTapped() {
-        let urlString = Bundle.main.path(forResource: "알파파", ofType: "mp3")
-        do {
-           try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
-            }
-            alpha = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            
-            guard let player = alpha else {
-                return
-            }
-            player.play()
-        }
-        catch {
-            print("오류가 났어 오류가 이런 젠장!!!")
-        }
-    
-    }
-    
     //스탑버튼
     
     
     @IBAction func stopTapped() {
-        SoundStop()
-    }
-    
-    func SoundStop() {
         if let player = fire, player.isPlaying {
             player.stop()
         }
@@ -383,19 +285,8 @@ class ViewController: UIViewController {
         if let player = forest, player.isPlaying {
             player.stop()
         }
-        if let player = delta, player.isPlaying {
-            player.stop()
-        }
-        if let player = theta, player.isPlaying {
-            player.stop()
-        }
-        if let player = beta, player.isPlaying {
-            player.stop()
-        }
-        if let player = alpha, player.isPlaying {
-            player.stop()
     }
-}
+    
     
     
     
@@ -408,7 +299,6 @@ class ViewController: UIViewController {
         self.TimarLabel.text = self.makeTimeString(hours: 0, minute: 0, seconds: 0)
         StartStopBtn.setTitle("Start", for: .normal)
         StartStopBtn.setTitleColor(UIColor.green, for: .normal)
-        SoundStop()
     }
     
     
@@ -514,38 +404,8 @@ class ViewController: UIViewController {
         let time = secondsToHoursMinutesSeconds(seconds: count)
         let timeString = makeTimeString(hours: time.0, minute: time.1, seconds: time.2)
         TimarLabel.text = timeString
-        if count == -1 {
-            Alarm()
-        }
-        if count == -120 {
-            Alarm()
-        }
-        if count == -300 {
-            Alarm()
-        }
-        
     }
-    func Alarm() {
-        SoundStop()
-        let urlString = Bundle.main.path(forResource: "삐삐삐삐알람소리", ofType: "mp3")
-        do {
-           try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
-            }
-            fire = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            
-            guard let player = fire else {
-                return
-            }
-            player.play()
-        }
-        catch {
-            print("알람오류")
-        }
-    }
+    
     
     //시간과 레이블 스트링 구현
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
