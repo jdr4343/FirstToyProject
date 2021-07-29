@@ -20,11 +20,6 @@
 		40B4009D26B311B200427F66 /* 비.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B4009626B311AF00427F66 /* 비.mp3 */; };
 		40B4009E26B311B200427F66 /* 불.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B4009726B311B100427F66 /* 불.mp3 */; };
 		40B4009F26B311B200427F66 /* 연필.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B4009826B311B200427F66 /* 연필.mp3 */; };
-		40B400A426B3386700427F66 /* 베타파.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B400A026B3386200427F66 /* 베타파.mp3 */; };
-		40B400A526B3386700427F66 /* 쎄타파.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B400A126B3386400427F66 /* 쎄타파.mp3 */; };
-		40B400A626B3386700427F66 /* 델타파.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B400A226B3386600427F66 /* 델타파.mp3 */; };
-		40B400A726B3386700427F66 /* 알파파.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B400A326B3386700427F66 /* 알파파.mp3 */; };
-		40B400A926B33EF400427F66 /* 삐삐삐삐알람소리.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40B400A826B33EF400427F66 /* 삐삐삐삐알람소리.mp3 */; };
 		8599E30A6E8E4FEADD9E24A3 /* Pods_NapsandMeditationAlarms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C576173119E793EC4E76DD /* Pods_NapsandMeditationAlarms.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,11 +40,6 @@
 		40B4009626B311AF00427F66 /* 비.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "비.mp3"; sourceTree = "<group>"; };
 		40B4009726B311B100427F66 /* 불.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "불.mp3"; sourceTree = "<group>"; };
 		40B4009826B311B200427F66 /* 연필.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "연필.mp3"; sourceTree = "<group>"; };
-		40B400A026B3386200427F66 /* 베타파.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "베타파.mp3"; sourceTree = "<group>"; };
-		40B400A126B3386400427F66 /* 쎄타파.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "쎄타파.mp3"; sourceTree = "<group>"; };
-		40B400A226B3386600427F66 /* 델타파.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "델타파.mp3"; sourceTree = "<group>"; };
-		40B400A326B3386700427F66 /* 알파파.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "알파파.mp3"; sourceTree = "<group>"; };
-		40B400A826B33EF400427F66 /* 삐삐삐삐알람소리.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "삐삐삐삐알람소리.mp3"; sourceTree = "<group>"; };
 		641AD4D99DACAC41CA7DDC7F /* Pods-NapsandMeditationAlarms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NapsandMeditationAlarms.debug.xcconfig"; path = "Target Support Files/Pods-NapsandMeditationAlarms/Pods-NapsandMeditationAlarms.debug.xcconfig"; sourceTree = "<group>"; };
 		78C576173119E793EC4E76DD /* Pods_NapsandMeditationAlarms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NapsandMeditationAlarms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,11 +99,6 @@
 				40B4009826B311B200427F66 /* 연필.mp3 */,
 				40B4009326B311AA00427F66 /* 키보드.mp3 */,
 				40B4009526B311AE00427F66 /* 파도소리.mp3 */,
-				40B400A226B3386600427F66 /* 델타파.mp3 */,
-				40B400A026B3386200427F66 /* 베타파.mp3 */,
-				40B400A126B3386400427F66 /* 쎄타파.mp3 */,
-				40B400A326B3386700427F66 /* 알파파.mp3 */,
-				40B400A826B33EF400427F66 /* 삐삐삐삐알람소리.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -199,14 +184,9 @@
 				40B4009F26B311B200427F66 /* 연필.mp3 in Resources */,
 				40B4009E26B311B200427F66 /* 불.mp3 in Resources */,
 				40B4009A26B311B200427F66 /* 키보드.mp3 in Resources */,
-				40B400A526B3386700427F66 /* 쎄타파.mp3 in Resources */,
-				40B400A726B3386700427F66 /* 알파파.mp3 in Resources */,
 				40258FFB26AEE2650095F8E0 /* LaunchScreen.storyboard in Resources */,
 				40B4009B26B311B200427F66 /* 바람소리.mp3 in Resources */,
-				40B400A626B3386700427F66 /* 델타파.mp3 in Resources */,
 				40B4009926B311B200427F66 /* 숲.mp3 in Resources */,
-				40B400A926B33EF400427F66 /* 삐삐삐삐알람소리.mp3 in Resources */,
-				40B400A426B3386700427F66 /* 베타파.mp3 in Resources */,
 				40258FF826AEE2650095F8E0 /* Assets.xcassets in Resources */,
 				40258FF626AEE2630095F8E0 /* Main.storyboard in Resources */,
 			);
